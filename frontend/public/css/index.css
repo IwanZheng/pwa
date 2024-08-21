@@ -1,0 +1,170 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    height: 50%;
+}
+
+.first {
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.title {
+    font-family: "Roboto Medium";
+    color: hsl(var(--hue), var(--saturation), 40%);
+}
+
+.slogan {
+    font-family: "Roboto Regular";
+    font-size: 2rem;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    width: 20rem;
+    min-width: 20rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.logo {
+    font-family: "Roboto Medium";
+    font-size: 2rem;
+    font-weight: 700;
+    height: 10rem;
+    color: hsl(var(--hue), var(--saturation), 40%);
+}
+
+.button-container {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1 0 0;
+}
+
+.button-container img {
+    cursor: pointer;
+}
+
+.loader-container {
+    display: none;
+    height: 2rem;
+    gap: 1rem;
+}
+
+.loader {
+    border: 0.2rem solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 0.2rem solid hsl(var(--hue), var(--saturation), 50%);
+    width: 1rem;
+    height: 1rem;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+.tos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+}
+
+.footer {
+    display: flex;
+    height: 50%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* 
+    For Mobile Devices – 320px — 480px.
+    iPads and Tablets – 481px — 768px.
+    Laptops and small screen – 769px — 1024px.
+    Large screens and Desktops – 1025px — 1200px.
+    TV and Extra Large Screens – 1201px and more.
+*/
+#quickstart-account-details,
+#quickstart-oauthtoken {
+    overflow-y: scroll;
+}
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width:1200PX) {
+    .page {
+        max-width: 1600px;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .first {
+        width: 100%;
+    }
+
+    .content {
+        align-items: center;
+        justify-content: flex-end;
+        padding: 5rem;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1200PX) {
+    .page {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .sign-in {
+        align-items: center;
+    }
+}

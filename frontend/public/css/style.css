@@ -1,0 +1,195 @@
+:root {
+  font-size: 16px;
+  --hue: 250;
+  --saturation: 50%;
+  --transition-speed: 200ms;
+  --lightness-1: 10%;
+  --lightness-2: 20%;
+  --lightness-3: 30%;
+  --lightness-4: 40%;
+  --lightness-5: 50%;
+  --lightness-6: 60%;
+  --lightness-7: 70%;
+  --lightness-8: 80%;
+  --lightness-9: 90%;
+}
+
+*,
+*::before,
+*::after,
+*:focus {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  outline-style: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Roboto Regular";
+  height: 100dvh;
+  width: 100%;
+  color: hsl(var(--hue), var(--saturation), var(--lightness-1));
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(var(--hue), var(--saturation), 90%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--hue), var(--saturation), 10%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--hue), var(--saturation), var(--lightness-5));
+}
+
+button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  border: none;
+  background-color: hsl(var(--hue), var(--saturation), var(--lightness-2));
+  color: hsl(var(--hue), var(--saturation), 95%);
+  cursor: pointer;
+}
+
+button i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+}
+
+button b {
+  flex: 1 0 0;
+}
+
+button span {
+  position: absolute;
+  border-radius: 50%;
+  /* To make it round */
+  background-color: rgba(0, 0, 0, 0.3);
+
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  /* for positioning */
+  margin-left: -50px;
+
+  animation: ripple 1s;
+  opacity: 0;
+}
+
+button:hover {
+  background-color: hsl(var(--hue), var(--saturation), 30%);
+}
+
+button:disabled {
+  cursor: default;
+  background-color: hsl(var(--hue), var(--saturation), 80%);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  padding: 0.25rem;
+}
+
+i {
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+  cursor: pointer;
+}
+
+pre {
+  margin: 1rem;
+  background-color: hsl(var(--hue), var(--saturation), 20%);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+code {
+  text-wrap: wrap;
+  color: hsl(var(--hue), var(--saturation), 80%);
+}
+
+/* https://phuoc.ng/collection/css-layout/indeterminate-progress-bar/ 
+
+<div class="indeterminate-progress-bar">
+    <div class="indeterminate-progress-bar__progress"></div>
+</div>
+
+*/
+
+.indeterminate-progress-bar {
+  background-color: hsl(var(--hue), var(--saturation), 10%);
+  border-radius: 0.25rem;
+  height: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.indeterminate-progress-bar__progress {
+  background-color: hsl(var(--hue), var(--saturation), 50%);
+  border-radius: 0.25rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 50%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: indeterminate-progress-bar;
+}
+
+@keyframes indeterminate-progress-bar {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
+/* Add animation */
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}

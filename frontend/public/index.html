@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Panda</title>
+    
+    <link rel="stylesheet" href="./css/font/font.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- In the callback, you would hide the gSignInWrapper element on a
+  successful sign in -->
+    <div class="page">
+        <div class="content">
+            <div class="first">
+                <h2 class="title">Papa Panda</h2> <span class="slogan">
+                    membantu Anda terhubung dan berbagi dengan orang-orang dalam kehidupan!
+                </span>
+            </div>
+            <div class="sign-in-form">
+                <div class="logo">Papa Panda</div>
+                <div class="button-container">
+                    <img id="sign-in-button" role="button" src="./assets/images/web_light_rd_SI.svg" alt="">
+                </div>
+                <div id="loader" class="loader-container">
+                    <div><small>Redirecting to Google sign in page ...</small></div>
+                    <div class="loader"></div>
+                </div>
+                <small class="tos">
+                    <div id="logout-button">LOGOUT</div>
+                    <p>By continue I agree to the</p>
+                    <a href="">terms and conditions</a>
+                </small>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright @ Papa Panda
+            <script type="text/javascript">document.write(new Date().getFullYear());</script>
+        </div>
+    </div>
+  
+    <script type="module" src="./script/app/firebase/firebase.js"></script>
+</body>
+
+</html>

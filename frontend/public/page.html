@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papa Panda</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/font/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/pages/page.css">
+    <link rel="stylesheet" href="./css/pages/main/chat.css">
+    <link rel="stylesheet" href="./css/pages/menu/menu.css">
+    <link rel="stylesheet" href="./css/pages/sidebar/avatar.css">
+    <link rel="stylesheet" href="./css/pages/sidebar/tts.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="page" class="page">
+        <section id="menu" class="menu">
+            <div class="navbar">
+                <div class="logo-bar">
+                    <div id="menu-close-icon">
+                        <i class="material-icons-round">close</i>
+                    </div>
+                    <div id="menu-logo" class="logo"> Papa Panda </div>
+                </div>
+                <div class="user-profile-bar">
+                    <div class="user-profile-photo">
+                        <img src="./assets/images/panda.svg" alt="">
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-profile-name">
+                            <div class="user-name">username</div>
+                        </div>
+                        <div class="user-profile-status">
+                            <small>Online 1 hour ago</small>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#5f6368">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z" />
+                                <path d="M7 10.19V18h2v-6h6v6h2v-7.81l-5-4.5z" opacity=".3" />
+                            </svg>
+                            <span class="link-text" data-i18n>home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#5f6368">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M20 4H4v13.17L5.17 16H20V4zm-6 10H6v-2h8v2zm4-3H6V9h12v2zm0-3H6V6h12v2z"
+                                    opacity=".3" />
+                                <path
+                                    d="M20 18c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14zm-16-.83V4h16v12H5.17L4 17.17zM6 12h8v2H6zm0-3h12v2H6zm0-3h12v2H6z" />
+                            </svg>
+                            <span class="link-text" data-i18n>Chat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
+                                width="24px" fill="#5f6368">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M19 17.47c-.88-.07-1.75-.22-2.6-.45l-1.19 1.19c1.2.41 2.48.67 3.8.75v-1.49zM6.54 5h-1.5c.09 1.32.35 2.59.75 3.8l1.2-1.2c-.24-.84-.39-1.71-.45-2.6z"
+                                    opacity=".3" />
+                                <path
+                                    d="M20 21c.55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17zm-3.6-3.98c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19zM5.03 5h1.5c.07.89.22 1.76.46 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79z" />
+                            </svg>
+                            <span class="link-text" data-i18n>Call</span>
+                        </a>
+                    </li>
+                    <li id="logOutButton" class="nav-item">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                                fill="#5f6368">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M19.28 8.6l-.7-1.21-1.27.51-1.06.43-.91-.7c-.39-.3-.8-.54-1.23-.71l-1.06-.43-.16-1.13L12.7 4h-1.4l-.19 1.35-.16 1.13-1.06.44c-.41.17-.82.41-1.25.73l-.9.68-1.05-.42-1.27-.52-.7 1.21 1.08.84.89.7-.14 1.13c-.03.3-.05.53-.05.73s.02.43.05.73l.14 1.13-.89.7-1.08.84.7 1.21 1.27-.51 1.06-.43.91.7c.39.3.8.54 1.23.71l1.06.43.16 1.13.19 1.36h1.39l.19-1.35.16-1.13 1.06-.43c.41-.17.82-.41 1.25-.73l.9-.68 1.04.42 1.27.51.7-1.21-1.08-.84-.89-.7.14-1.13c.04-.31.05-.52.05-.73 0-.21-.02-.43-.05-.73l-.14-1.13.89-.7 1.1-.84zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"
+                                    opacity=".3" />
+                                <path
+                                    d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                            </svg>
+                            <span class="link-text" data-i18n>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content-container">
+                <div class="contacts-container">
+                    <div class="contacts-header-bar">
+                        <div id="app-logo" class="logo">Papa Panda</div>
+                    </div>
+                    <div class="contacts-list-container">
+
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-contact-container">
+                        <div class="chat-header-bar">
+                            <div class="chat-back-icon">
+                                <i class="material-icons-round">arrow_back </i>
+                            </div>
+                            <div class="chat-contact-profile-bar">
+                                <div class="chat-profile-photo">
+                                    <img id="chat-picture" src="./assets/images/panda.svg" alt="">
+                                </div>
+                                <div class="chat-profile">
+                                    <div class="chat-profile-name">
+                                        <div class="chat-name">User</div>
+                                    </div>
+                                    <div class="chat-profile-status">
+                                        <small>Online 1 hour ago</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="chat-menu-icon" class="chat-menu-icon">
+                                <i class="material-icons-round">more_vert</i>
+                            </div>
+                        </div>
+                        <div class="chat-content">
+                        </div>
+                        <div class="chat-footer-bar">
+                            <div class="chat-input-bar">
+                                <div class="chat-input-container">
+                                    <i id="emoji" class="start-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5rem" width="1.5rem"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M10.5199 19.8634C10.5955 18.6615 10.8833 17.5172 11.3463 16.4676C9.81124 16.3252 8.41864 15.6867 7.33309 14.7151L8.66691 13.2248C9.55217 14.0172 10.7188 14.4978 12 14.4978C12.1763 14.4978 12.3501 14.4887 12.5211 14.471C14.227 12.2169 16.8661 10.7083 19.8634 10.5199C19.1692 6.80877 15.9126 4 12 4C7.58172 4 4 7.58172 4 12C4 15.9126 6.80877 19.1692 10.5199 19.8634ZM19.0233 12.636C15.7891 13.2396 13.2396 15.7891 12.636 19.0233L19.0233 12.636ZM22 12C22 12.1677 21.9959 12.3344 21.9877 12.5L12.5 21.9877C12.3344 21.9959 12.1677 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM10 10C10 10.8284 9.32843 11.5 8.5 11.5C7.67157 11.5 7 10.8284 7 10C7 9.17157 7.67157 8.5 8.5 8.5C9.32843 8.5 10 9.17157 10 10ZM17 10C17 10.8284 16.3284 11.5 15.5 11.5C14.6716 11.5 14 10.8284 14 10C14 9.17157 14.6716 8.5 15.5 8.5C16.3284 8.5 17 9.17157 17 10Z">
+                                            </path>
+                                        </svg>
+                                    </i>
+                                    <input id="chat-input" class="chat-input" type="text" name="question"
+                                        autocomplete="off" placeholder="Message" />
+                                    <input id="file-elem" type="file" style="display:none"
+                                        accept="image/*" multiple onchange="uploads()" />
+                                    <!-- icons from https://remixicon.com/ -->
+                                    <i id="attachment" class="attachment-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5rem" width="1.5rem"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M14 13.5V8C14 5.79086 12.2091 4 10 4C7.79086 4 6 5.79086 6 8V13.5C6 17.0899 8.91015 20 12.5 20C16.0899 20 19 17.0899 19 13.5V4H21V13.5C21 18.1944 17.1944 22 12.5 22C7.80558 22 4 18.1944 4 13.5V8C4 4.68629 6.68629 2 10 2C13.3137 2 16 4.68629 16 8V13.5C16 15.433 14.433 17 12.5 17C10.567 17 9 15.433 9 13.5V8H11V13.5C11 14.3284 11.6716 15 12.5 15C13.3284 15 14 14.3284 14 13.5Z">
+                                            </path>
+                                        </svg>
+                                    </i>
+                                    <i id="camera" class="end-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5rem" width="1.5rem"
+                                            viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M9.82843 5L7.82843 7H4V19H20V7H16.1716L14.1716 5H9.82843ZM9 3H15L17 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V6C2 5.44772 2.44772 5 3 5H7L9 3ZM12 18C8.96243 18 6.5 15.5376 6.5 12.5C6.5 9.46243 8.96243 7 12 7C15.0376 7 17.5 9.46243 17.5 12.5C17.5 15.5376 15.0376 18 12 18ZM12 16C13.933 16 15.5 14.433 15.5 12.5C15.5 10.567 13.933 9 12 9C10.067 9 8.5 10.567 8.5 12.5C8.5 14.433 10.067 16 12 16Z">
+                                            </path>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="chat-button-container">
+                                    <button id="chat-button" class="chat-button">
+                                        <i class="material-icons-round">send</i>
+                                        <b class="text-button" data-i18n>submit</b>
+                                    </button>
+                                    <button id="record-button" class="chat-button">
+                                        <i class="material-icons-round ">mic </i>
+                                        <b class="text-button" data-i18n>record</b>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sidebar" class="sidebar">
+            <div class="sidebar-container">
+                <div class="sidebar-header-bar">
+                    <div id="sidebar-back-icon" class="sidebar-back-icon">
+                        <i class="material-icons-round">arrow_back </i>
+                    </div>
+                    <div class="sidebar-title"><b>Avatar</b></div>
+                </div>
+                <div class="sidebar-content">
+                    <div class="avatar-container">
+                        <div id="avatar" class="avatar">
+                            <img src="./assets/images/panda.svg" alt="" />
+                        </div>
+                        <audio id="output" controls src='' autoplay></audio>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                  
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
+        integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+        integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+    <script src="./script/app/language.js"></script>
+    <script src="./script/app/utils.js"></script>
+    <script src="./script/script.js"></script>
+    <script type="module" src="./script/app/firebase/firebase.js"></script>
+    <script type="module" src="./script/app/audio.js"></script>
+    <script type="module" src="./script/app/chat.js"></script>
+    <script type="module" src="./script/app/attachment.js"></script>
+
+</body>
+
+</html>
